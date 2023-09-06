@@ -1,3 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .nav-link {
+        height: 100%;
+        padding: 0 2rem;
+        display: grid;
+        place-items: center;
+        border-bottom: 0.1rem solid transparent;
+    }
+
+    .custom-shadow {
+        box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
