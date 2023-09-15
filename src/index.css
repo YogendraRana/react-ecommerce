@@ -14,6 +14,16 @@
     .custom-shadow {
         box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2);
     }
+
+    .card-button{
+        height: 3.5rem;
+        width: 3.5rem;
+        margin-bottom: 0.5rem;
+        color: #4b504c;
+        background-color: #fff;
+        border-radius: 20%;
+        border: 1px solid #ededed;
+    }
 }
 
 * {

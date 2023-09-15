@@ -45,7 +45,7 @@ const Search = ({ isOpen, setOpen }: SearchProps) => {
                 id="overlay" 
                 onClick={handleClick}
                 className={`
-                    absolute top-0 left-0 right-0 bg-black/20 duration-300 h-[100vh]
+                    absolute top-0 left-0 right-0 bg-black/20 duration-300 h-[100vh] z-[10]
                     ${isOpen ? "translate-y-0" : "translate-y-[-100%]"}`}>
             </div>
         </>
