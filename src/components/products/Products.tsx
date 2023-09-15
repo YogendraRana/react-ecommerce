@@ -1,10 +1,18 @@
+import React from "react"
 import Navbar from "../layout/Navbar"
 
-const Products = ({ category }: {category: string}): JSX.Element => {
+// props type
+type ProductsProp = {
+    category: string
+}
+
+const Products: React.FC<ProductsProp> = ({ category }) => {
     return (
-        <section>
+        <div>
             <Navbar />
-        </section>
+
+            {category}
+        </div>
     )
 }
 

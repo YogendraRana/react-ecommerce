@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import components
-import Card from '../card/card.tsx';
+import Card from './Card.tsx';
 
 // import types
 import { ItemType } from '../../types/type.ts';
@@ -23,11 +23,11 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
     const swiperRef = useRef<SwiperType>();
 
     return (
-        <div className='px-[10rem] py-[5rem]'>
+        <div className='px-[10rem] py-[2rem]'>
             <div className='mb-[1rem] flex justify-between items-center'>
-                <div className='text-[3rem]'>
+                <div className='text-[3rem] leading-0'>
                     {title}
-                    <span className='text-[#98a39b]'>{message}</span>
+                    <span className='text-[#98a39b] text-[2.5rem]'> {message}</span>
                 </div>
 
                 <div className='flex gap-[0.5rem]'>
@@ -40,7 +40,7 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
                 </div>
             </div>
             <Swiper
-                spaceBetween={8}
+                spaceBetween={10}
                 slidesPerView={4}
                 onSwiper={(swiper) => {swiperRef.current = swiper}}
                 breakpoints={{

@@ -28,12 +28,13 @@ const Card = ({ item }: { item: ItemType }) => {
     };
 
     return (
-        <div className='relative rounded-[0.5rem] overflow-hidden border bg-[#ededed]' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <img src={item.image} alt={item.name} className='h-[30rem] w-[100%] group-hover:scale-[1.3] object-cover duration-300' />
+        <div className='relative rounded-[0.5rem] overflow-hidden bg-[#ededed]' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            <img src={item.image} alt={item.name} className='h-[27.5rem] w-[100%] group-hover:scale-[1.3] object-cover duration-300' />
 
             {/* info */}
             <motion.div 
                 className='p-[1rem] flex justify-between absolute left-0 bottom-0 right-0 bg-white/60 border rounded-[0.5rem] m-[0.5rem]'
+                initial= {{opacity: 0, y: '100%'}}
                 animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : '100%', transition: { duration: 0.3 }}}
             >
                 <h3 className='text-[1.5rem]'>{item.name}</h3>

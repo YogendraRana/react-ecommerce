@@ -7,3 +7,10 @@ export interface ItemType {
     description: string;
     image: string;
 }
+
+export interface StoreMenuType {
+    id: number;
+    label: string;
+    href: string;
+    icon: string;
+}
