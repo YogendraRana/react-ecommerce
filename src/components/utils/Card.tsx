@@ -28,7 +28,7 @@ const Card = ({ item }: { item: ItemType }) => {
     };
 
     return (
-        <div className='relative rounded-[0.5rem] overflow-hidden bg-[#ededed]' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className='relative rounded-[0.5rem] overflow-hidden bg-[#f1f2f3]' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <img src={item.image} alt={item.name} className='h-[27.5rem] w-[100%] group-hover:scale-[1.3] object-cover duration-300' />
 
             {/* info */}
