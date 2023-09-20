@@ -34,17 +34,17 @@ const Banner = () => {
             </div>
 
             <div className="absolute bottom-[2rem] left-[50%] translate-x-[-50%] flex gap-[1rem] items-center">
-                <button onClick={() => prev()} className="h-[4rem] w-[4rem] text-[#8a958d] hover:bg-white rounded-full duration-300">
+                <button onClick={() => prev()} className="h-[3rem] w-[3rem] text-[#8a958d] hover:bg-white rounded-full duration-300">
                     <i className="fa-solid fa-chevron-left"></i>
                 </button>
 
                 <div className="flex gap-[1rem]">
-                    {data.map((_, index) => (<span onClick={() => setActiveIndex(index)} key={index} className={`${activeIndex === index ? "bg-[#8a958d]" : "bg-white"} h-[1rem] w-[1rem] rounded-full`}></span>))}
+                    {data.map((_, index) => (<span onClick={() => setActiveIndex(index)} key={index} className={`${activeIndex === index ? "bg-[#8a958d]" : "bg-white"} h-[0.75rem] w-[0.75rem] rounded-full`}></span>))}
                 </div>
 
-                <button onClick={() => next()} className="h-[4rem] w-[4rem] text-[#8a958d] hover:bg-white rounded-full duration-300">
+                <button onClick={() => next()} className="h-[3rem] w-[3rem] text-[#8a958d] hover:bg-white rounded-full duration-300">
                     <i className="fa-solid fa-chevron-right"></i>
-                </button>~
+                </button>
             </div>
         </div>
     )

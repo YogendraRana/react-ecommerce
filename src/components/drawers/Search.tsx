@@ -2,15 +2,15 @@ import React from "react";
 
 // interface
 interface SearchProps {
-    isOpen: boolean;
-    setOpen: () => void;
+    isSearchOpen: boolean;
+    setIsSearchOpen: () => void;
 }
 
-const Search = ({ isOpen, setOpen }: SearchProps) => {
+const Search = ({ isSearchOpen, setIsSearchOpen }: SearchProps) => {
 
     const handleClick = (e: React.MouseEvent) => {
         if (e.currentTarget.id === 'overlay') {
-            setOpen();
+            setIsSearchOpen();
         }
     };
 
@@ -19,11 +19,11 @@ const Search = ({ isOpen, setOpen }: SearchProps) => {
             <div 
                 className={`
                 custom-shadow absolute top-0 left-0 right-0 h-[20rem] px-[10rem] flex flex-col justify-center bg-white z-[50] duration-300 
-                ${isOpen ? "translate-y-0" : "translate-y-[-100%]"}
+                ${isSearchOpen ? "translate-y-0" : "translate-y-[-110%]"}
             `}>
                 <div className="flex justify-between">
                     <h2 className="text-[1.5rem] text-black/60">What are you looking for?</h2>
-                    <button className="text-[2rem]" type="button" onClick={setOpen}>
+                    <button className="text-[2rem]" type="button" onClick={setIsSearchOpen}>
                         <i className="fa-solid fa-xmark"></i>
                     </button>
                 </div>
@@ -45,8 +45,10 @@ const Search = ({ isOpen, setOpen }: SearchProps) => {
                 id="overlay" 
                 onClick={handleClick}
                 className={`
-                    absolute top-0 left-0 right-0 bg-black/20 duration-300 h-[100vh] z-[10]
-                    ${isOpen ? "translate-y-0" : "translate-y-[-100%]"}`}>
+                    absolute top-0 left-0 right-0 bg-black/20 duration-300 h-[100vh]
+
+                    ${isSearchOpen ? "opacity-100 visible z-[10]" : "opacity-0 invisible z-[-10]"}`}
+                >
             </div>
         </>
     )

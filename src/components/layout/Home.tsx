@@ -12,7 +12,7 @@ import data from "../../data/data";
 
 function Home() {
     return (
-        <section>
+        <section className="overflow-hidden relative">
             <Navbar />
             {/* <Divider /> */}
             

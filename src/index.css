@@ -37,6 +37,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Trebuchet MS';
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 ul {
