@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 // import data
@@ -10,6 +11,8 @@ interface CartProps {
 }
 
 const Cart = ({ isCartOpen, setIsCartOpen }: CartProps) => {
+    const navigate = useNavigate();
+
     const handleClick = (e: React.MouseEvent) => {
         if (e.currentTarget.id === 'overlay') {
             setIsCartOpen();
@@ -23,11 +26,11 @@ const Cart = ({ isCartOpen, setIsCartOpen }: CartProps) => {
                     isCartOpen &&
                     <motion.div
                         initial={{ x: "100%" }}
-                        animate={{ x: isCartOpen ? "0" : "100%", display: isCartOpen ? "block" : "none" }}
-                        transition={{stiffness: 1}}
+                        animate={{ x: isCartOpen ? "0" : "100%" }}
+                        transition={{ stiffness: 1 }}
                         className={`
                             h-[100vh] w-[40rem]
-                            absolute top-0 right-0 
+                            fixed top-0 right-0 bottom-0
                             flex flex-col 
                             bg-white 
                             z-[50] 
@@ -66,7 +69,9 @@ const Cart = ({ isCartOpen, setIsCartOpen }: CartProps) => {
                                 <p className="text-[1.5rem]">Total</p>
                                 <strong className="text-[1.5rem]">Rs 100</strong>
                             </div>
-                            <button className="w-full p-[1rem] rounded-full bg-[#2D3448] text-[1.25rem] text-white">Checkout</button>
+                            <button
+                                onClick={() => navigate('/checkout')}
+                                className="w-full p-[1rem] rounded-full bg-[#2D3448] text-[1.25rem] text-white">Checkout</button>
                         </div>
                     </motion.div>
                 }

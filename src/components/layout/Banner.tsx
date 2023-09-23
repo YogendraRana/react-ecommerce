@@ -39,7 +39,14 @@ const Banner = () => {
                 </button>
 
                 <div className="flex gap-[1rem]">
-                    {data.map((_, index) => (<span onClick={() => setActiveIndex(index)} key={index} className={`${activeIndex === index ? "bg-[#8a958d]" : "bg-white"} h-[0.75rem] w-[0.75rem] rounded-full`}></span>))}
+                    {
+                        data.map((_, index) =>
+                            <span
+                                key={index} 
+                                onClick={() => setActiveIndex(index)}
+                                className={`${activeIndex === index ? "bg-[#8a958d]" : "bg-white"} h-[0.75rem] w-[0.75rem] rounded-full`}></span>
+                        )
+                    }
                 </div>
 
                 <button onClick={() => next()} className="h-[3rem] w-[3rem] text-[#8a958d] hover:bg-white rounded-full duration-300">

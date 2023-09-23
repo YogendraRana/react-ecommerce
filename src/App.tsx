@@ -6,6 +6,7 @@ import Home from "./components/layout/Home";
 import AuthForm from "./components/auth/AuthForm";
 import NotFound from "./components/layout/NotFound";
 import Products from "./components/products/Products";
+import Checkout from "./components/checkout/Checkout";
 
 const router = createBrowserRouter([
     { path: "/", element: <Home /> },
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     { path: "/women", element: <Products category="women" /> },
     { path: "/kids", element: <Products category="kids" /> },
     { path: "/join", element: <AuthForm /> },
+    { path: "/checkout", element: <Checkout /> },
     { path: '*', element: <NotFound /> }
 ]);
 
