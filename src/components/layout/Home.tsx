@@ -1,9 +1,9 @@
 // import components
+import Banner from "./Banner"
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import Slider from "../utils/Slider";
 import Store from "../products/Store";
-import Footer from "./Footer";
-import Banner from "./Banner"
 import Divider from "../utils/Divider";
 import Recommendation from "./Recommendation";
 
@@ -12,23 +12,26 @@ import data from "../../data/data";
 
 function Home() {
     return (
-        <section className="overflow-hidden relative">
+        <section className="relative">
             <Navbar />
-            {/* <Divider /> */}
-            
-            <Banner />
-            <Divider />
 
-            <Slider title="New Arrivals." message="Good things are waiting for you." items={data}  />
-            <Divider />
+            <main>
+                <Banner />
+                <Divider />
 
-            <Recommendation />
-            <Divider />
+                <Slider title="New Arrivals." message="Good things are waiting for you." items={data}  />
+                <Divider />
 
-            <Store />
-            <Divider />
+                <Recommendation />
+                <Divider />
+
+                <Store />
+                <Divider />
+            </main>
             
             <Footer />
+
+            {/* drawers */}
         </section>
     )
 }

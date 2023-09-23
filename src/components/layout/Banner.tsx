@@ -15,7 +15,7 @@ const Banner = () => {
     }
 
     return (
-        <div className="h-[calc(95vh-var(--nav-height))] px-[10rem] relative overflow-hidden flex bg-[#f1f2f3]">
+        <div className="h-[calc(95vh-var(--nav-height))] px-[10rem] relative flex bg-[#f1f2f3]">
             <div className='basis-[50%] flex flex-col justify-center gap-[2rem] grow'>
                 <h2 className="text-[4rem]">{data[activeIndex].name}</h2>
                 <p className="text-[1.5rem]">{data[activeIndex].description}</p>

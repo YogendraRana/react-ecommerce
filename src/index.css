@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --nav-height: 7rem;
-    --nav-z: 100;
-}
-
 @layer components {
     .nav-link {
         height: 100%;
@@ -29,6 +24,14 @@
         border-radius: 20%;
         border: 1px solid #ededed;
     }
+}
+
+/******************** custom css ********************/
+:root {
+    --nav-height: 7rem;
+    --z-nav: 100;
+    --z-overlay: 200;
+    --z-drawer: 300; 
 }
 
 * {

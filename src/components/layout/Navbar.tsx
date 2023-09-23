@@ -1,21 +1,28 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 
 // import components
-import Search from "../drawers/Search";
 import Cart from "../drawers/Cart";
+import Search from "../drawers/Search";
 
 const Navbar = (): JSX.Element => {
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     return (
         <header 
-            className={`h-[var(--nav-height)] px-[10rem] flex justify-between items-center sticky top-0 bg-white/80
-            z-[var(--nav-z)]
+            className={`
+            h-[var(--nav-height)] 
+            px-[10rem] 
+            flex justify-between items-center 
+            sticky top-0 
+            bg-white/80
+            z-[var(--z-nav)]
         `}>
             <Link to='/' className="mr-[5rem] text-[2.5rem] font-medium">
-                Company.
+                Shop.
             </Link>
 
             <nav className="h-full flex items-center text-[1.5rem]">
@@ -31,12 +38,13 @@ const Navbar = (): JSX.Element => {
                 <button onClick={() => setIsCartOpen(!isCartOpen)} className="h-[3.5rem] w-[3.5rem] bg-[#ededed] rounded-full text-[1.25rem] duration-200">
                     <i className="fa-solid fa-bag-shopping"></i>
                 </button>
+                <button onClick={() => navigate('/join')} className="h-[3.5rem] w-[3.5rem] bg-[#ededed] rounded-full text-[1.25rem] duration-200">
+                    <i className="fa-solid fa-user"></i>
+                </button>
             </div>
 
-            {/* search component */}
+            {/* drawers */}
             <Search isSearchOpen={isSearchOpen} setIsSearchOpen={() => setIsSearchOpen(!isSearchOpen)} />
-
-            {/* cart component */}
             <Cart isCartOpen={isCartOpen} setIsCartOpen={() => setIsCartOpen(!isCartOpen)}  />
         </header>
     )
