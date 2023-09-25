@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // import css
 import './payment.css'
-import Divider from '../utils/Divider';
+import Divider from '../utils/Space';
 
 // prop type
 type PaymentPropsType = {

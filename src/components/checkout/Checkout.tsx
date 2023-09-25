@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Divider from '../utils/Divider';
+import Divider from '../utils/Space';
 import Footer from '../layout/Footer';
 
 const Checkout = () => {
@@ -100,7 +100,7 @@ const Checkout = () => {
                 {/* confirm summary */}
                 <Divider />
                 <div className='p-[5rem] outline-dashed outline-2 outline-[#b2beb5] '>
-                    <h2 className='text-[2rem] pb-[1rem] mb-[2rem] text-center border-b'>Order Summary</h2>
+                    <h2 className='text-[2rem] pb-[1rem] mb-[2rem] font-semibold'>Order Summary</h2>
 
                     <div className='grid grid-cols-3 gap-[1rem]'>
                         <label>
@@ -122,12 +122,12 @@ const Checkout = () => {
                     <Divider />
                     
                     <div className='pt-[2rem] flex gap-[1rem] justify-end border-t'>
-                        <button className='py-[1.25rem] w-[12.5rem] bg-[#ededed] cursor-pointer rounded-[0.5rem] text-[1.25rem]'>
+                        <button className='py-[1.25rem] w-[12.5rem] cursor-pointer rounded-[0.5rem] text-[1.25rem] text-black bg-[#ededed] duration-300'>
                             <i className="fa-solid fa-xmark"></i>
                             <span className='ml-[1rem]'>Cancel Order</span>
                         </button>
-                        <button className='py-[1.25rem] w-[12.5rem] bg-[#ededed] cursor-pointer rounded-[0.5rem] text-[1.25rem]'>
-                            <i className="fa-solid fa-house"></i>
+                        <button className='py-[1.25rem] w-[12.5rem] cursor-pointer rounded-[0.5rem] text-[1.25rem] text-white bg-[#24252a] duration-300'>
+                            <i className="fa-solid fa-list-check"></i>
                             <span className='ml-[1rem]'>Place Order</span>
                         </button>
                     </div>

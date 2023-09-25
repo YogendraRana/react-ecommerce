@@ -2,9 +2,9 @@
 import Banner from "./Banner"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Space from "../utils/Space";
 import Slider from "../utils/Slider";
 import Store from "../products/Store";
-import Divider from "../utils/Divider";
 import Recommendation from "./Recommendation";
 
 // import data
@@ -17,16 +17,16 @@ function Home() {
 
             <main>
                 <Banner />
-                <Divider />
+                <Space />
 
                 <Slider title="New Arrivals." message="Good things are waiting for you." items={data}  />
-                <Divider />
+                <Space />
 
                 <Recommendation />
-                <Divider />
+                <Space />
 
                 <Store />
-                <Divider />
+                <Space />
             </main>
             
             <Footer />

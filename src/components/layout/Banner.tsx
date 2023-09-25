@@ -44,7 +44,7 @@ const Banner = () => {
                             <span
                                 key={index} 
                                 onClick={() => setActiveIndex(index)}
-                                className={`${activeIndex === index ? "bg-[#8a958d]" : "bg-white"} h-[0.75rem] w-[0.75rem] rounded-full`}></span>
+                                className={`${activeIndex === index ? "bg-[#b2beb5]" : "bg-white"} h-[0.75rem] w-[0.75rem] rounded-full`}></span>
                         )
                     }
                 </div>
