@@ -31,10 +31,10 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
                 </div>
 
                 <div className='flex gap-[0.5rem]'>
-                    <button onClick={() => swiperRef.current && swiperRef.current.slidePrev()} className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#ededed] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'>
+                    <button onClick={() => swiperRef.current && swiperRef.current.slidePrev()} className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#e5e5e5] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'>
                         <i className='fa-solid fa-chevron-left'></i>
                     </button>
-                    <button onClick={() => swiperRef.current && swiperRef.current.slideNext()} className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#ededed] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'>
+                    <button onClick={() => swiperRef.current && swiperRef.current.slideNext()} className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#e5e5e5] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'>
                         <i className='fa-solid fa-chevron-right'></i>
                     </button>
                 </div>

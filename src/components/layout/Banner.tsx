@@ -40,7 +40,7 @@ const Banner = () => {
 
                 <div className="flex gap-[1rem]">
                     {
-                        data.map((_, index) =>
+                        data.slice(0, 3).map((_, index) =>
                             <span
                                 key={index} 
                                 onClick={() => setActiveIndex(index)}

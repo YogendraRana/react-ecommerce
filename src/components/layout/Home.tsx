@@ -19,7 +19,7 @@ function Home() {
                 <Banner />
                 <Space />
 
-                <Slider title="New Arrivals." message="Good things are waiting for you." items={data}  />
+                <Slider title="Trending." message="Good things are waiting for you." items={data}  />
                 <Space />
 
                 <Recommendation />

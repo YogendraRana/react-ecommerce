@@ -9,11 +9,11 @@ import Card from "../utils/Card";
 import data from "../../data/data";
 
 // import type
-import { StoreMenuType } from "../../types/type";
+import { ItemType, StoreMenuType } from "../../types/type";
 
 const Store = () => {
-    const [activeMenu, setActiveMenu] = useState<number>(1);
     const store_menu = useStore();
+    const [activeMenu, setActiveMenu] = useState<number>(1);
 
     return (
         <div className="px-[10rem]">
@@ -50,14 +50,11 @@ const Store = () => {
             </div>
 
             <div className="grid grid-cols-4 gap-4">
-                <Card item={data[0]} />
-                <Card item={data[1]} />
-                <Card item={data[2]} />
-                <Card item={data[3]} />
-                <Card item={data[4]} />
-                <Card item={data[0]} />
-                <Card item={data[0]} />
-                <Card item={data[0]} />
+                {
+                    data.map((item: ItemType, index) => (
+                        <Card key={index} item={item} />
+                    ))
+                }
             </div>
         </div>
     )

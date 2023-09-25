@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom"
 
 // import components
@@ -6,10 +6,16 @@ import Cart from "../drawers/Cart";
 import Search from "../drawers/Search";
 
 const Navbar = (): JSX.Element => {
+    const navigate = useNavigate();
+    const categoryRef = useRef<HTMLDivElement>(null);
+
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-    const navigate = useNavigate();
+    const handleCategoryClick = () => {
+        // scroll to top
+        window.scrollTo(0, 0);
+    }
 
     return (
         <header 
@@ -25,7 +31,7 @@ const Navbar = (): JSX.Element => {
                 Shop.
             </Link>
 
-            <nav className="h-full flex items-center text-[1.5rem]">
+            <nav className="h-full flex items-center text-[1.5rem]" ref={categoryRef} onClick={handleCategoryClick}>
                 <NavLink to="/men" className={({ isActive }) => isActive ? "nav-link border-black" : "nav-link border-white"}> Men </NavLink>
                 <NavLink to="/women" className={({ isActive }) => isActive ? "nav-link border-black" : "nav-link border-white"}> Women </NavLink>
                 <NavLink to="/kids" className={({ isActive }) => isActive ? "nav-link border-black" : "nav-link border-b borer-b borer-black"}> Kids </NavLink>

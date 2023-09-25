@@ -7,7 +7,7 @@ import data from '../../data/data'
 import Card from '../utils/Card'
 
 // menus
-const menus = ['Trending', "Popular"];
+const menus = ['New Arrivals', 'Best Sellers', "Trending"];
 
 const Recommendation = () => {
     const [recommendation, setRecommendation] = useState(menus[0]);
@@ -30,9 +30,9 @@ const Recommendation = () => {
                     {
                         menus.map((menu, index) =>
                             <li key={index}>
-                                <button 
-                                    onClick={() => handleMenuClick(menu)} 
-                                    className={`mb-[2rem] text-[3rem] duration-300 ${menu === recommendation ? "text-black" : "text-[#b2beb5] "}`} 
+                                <button
+                                    onClick={() => handleMenuClick(menu)}
+                                    className={`mb-[2rem] text-[3rem] duration-300 ${menu === recommendation ? "text-black" : "text-[#b2beb5] "}`}
                                 >
                                     {menu}
                                 </button>
@@ -43,13 +43,20 @@ const Recommendation = () => {
 
 
                 <div className="grid grid-cols-4 gap-[1rem]">
-                    {recommendation === menus[0] && data.slice(0, 4).map((item, index) => {
+                    {recommendation === menus[0] && data.slice(0, 8).map((item, index) => {
                         return (
                             <Card key={index} item={item} />
                         )
                     })}
 
-                    {recommendation === menus[1] && data.slice(0, 4).map((item, index) => {
+                    {recommendation === menus[1] && data.slice(0, 8).map((item, index) => {
+                        return (
+                            <Card key={index} item={item} />
+                        )
+                    })}
+
+
+                    {recommendation === menus[2] && data.slice(0, 8).map((item, index) => {
                         return (
                             <Card key={index} item={item} />
                         )
