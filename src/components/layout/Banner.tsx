@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 // import data
 import data from "../../data/data";
@@ -16,9 +17,32 @@ const Banner = () => {
 
     return (
         <div className="h-[calc(95vh-var(--nav-height))] px-[10rem] relative flex bg-[#f1f2f3]">
-            <div className='basis-[50%] flex flex-col justify-center gap-[2rem] grow'>
-                <h2 className="text-[4rem]">{data[activeIndex].name}</h2>
-                <p className="text-[1.5rem]">{data[activeIndex].description}</p>
+            <motion.div
+                className='basis-[50%] flex flex-col justify-center gap-[1rem]'
+                key={activeIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <motion.h2
+                    className="text-[4rem]"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    {data[activeIndex].name}
+                </motion.h2>
+                <motion.p
+                    className="text-[1.5rem]"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    {data[activeIndex].description}
+                </motion.p>
                 <div className="flex gap-[1rem]">
                     <button className="h-[4.5rem] w-[12rem] py-[1rem] text-[1.5rem] border border-[#b2beb5] hover:bg-[#b2beb5] duration-300">
                         Buy now
@@ -27,10 +51,20 @@ const Banner = () => {
                         <i className="fa-solid fa-shopping-cart"></i>
                     </button>
                 </div>
-            </div>
+            </motion.div>
 
             <div className="basis-[50%] grid place-items-center grow">
-                <img loading="lazy" className="h-full object-cover" src={data[activeIndex].image} alt="product-img"></img>
+                <motion.img
+                    loading="lazy"
+                    className="h-full object-cover"
+                    src={data[activeIndex].image}
+                    alt="product-img"
+                    key={activeIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                ></motion.img>
             </div>
 
             <div className="absolute bottom-[2rem] left-[50%] translate-x-[-50%] flex gap-[1rem] items-center">
@@ -42,7 +76,7 @@ const Banner = () => {
                     {
                         data.slice(0, 3).map((_, index) =>
                             <span
-                                key={index} 
+                                key={index}
                                 onClick={() => setActiveIndex(index)}
                                 className={`${activeIndex === index ? "bg-[#b2beb5]" : "bg-white"} h-[0.75rem] w-[0.75rem] rounded-full`}></span>
                         )
