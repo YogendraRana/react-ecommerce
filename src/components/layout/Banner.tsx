@@ -7,12 +7,14 @@ import data from "../../data/data";
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const banner_data = data.slice(0, 3);
+
     const prev = () => {
-        activeIndex === 0 ? setActiveIndex(data.length - 1) : setActiveIndex(activeIndex - 1);
+        activeIndex === 0 ? setActiveIndex(banner_data.length - 1) : setActiveIndex(activeIndex - 1);
     }
 
     const next = () => {
-        activeIndex === data.length - 1 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1);
+        activeIndex === banner_data.length - 1 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1);
     }
 
     return (
@@ -27,23 +29,23 @@ const Banner = () => {
             >
                 <motion.h2
                     className="text-[4rem]"
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
+                    exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.5 }}
                 >
                     {data[activeIndex].name}
                 </motion.h2>
                 <motion.p
                     className="text-[1.5rem]"
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
+                    exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.5 }}
                 >
                     {data[activeIndex].description}
                 </motion.p>
-                <div className="flex gap-[1rem]">
+                <div className="mt-[2rem] flex gap-[1rem]">
                     <button className="h-[4.5rem] w-[12rem] py-[1rem] text-[1.5rem] border border-[#b2beb5] hover:bg-[#b2beb5] duration-300">
                         Buy now
                     </button>
@@ -74,7 +76,7 @@ const Banner = () => {
 
                 <div className="flex gap-[1rem]">
                     {
-                        data.slice(0, 3).map((_, index) =>
+                        banner_data.map((_, index) =>
                             <span
                                 key={index}
                                 onClick={() => setActiveIndex(index)}

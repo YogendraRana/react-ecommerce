@@ -54,7 +54,7 @@ const Search = ({ isSearchOpen, setIsSearchOpen }: SearchProps) => {
                 onClick={handleClick}
                 className={`
                     h-[100vh]
-                    absolute top-0 left-0 right-0 bottom-0 
+                    fixed top-0 left-0 right-0 bottom-0 
                     bg-black/20 
                     duration-300
                     ${isSearchOpen ? "opacity-100 visible z-[10]" : "opacity-0 invisible z-[-10]"}`}

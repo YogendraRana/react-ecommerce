@@ -52,7 +52,7 @@ const AuthForm = () => {
 
 
     return (
-        <section className='h-[100vh] p-[1rem] flex relative'>
+        <section className='h-[100vh] py-[2rem] flex relative'>
             {/* login form */}
             <form
                 className={`
@@ -160,7 +160,12 @@ const AuthForm = () => {
                 <button type='button' onClick={toggleVariant} className='mt-[1rem] text-[1.25rem] text-[#767676]'>Have an account? <u>Login</u></button>
             </form>
 
-            <div className={`w-[40%] ml-[auto] bg-[#ededed] duration-1000 ${variant === "REGISTER" ? "translate-x-[-150%]" : ""}`}></div>
+            <div className={`
+                w-[40%] 
+                ml-[auto] 
+                bg-[#ededed] 
+                duration-1000 ${variant === "REGISTER" ? "translate-x-[-150%]" : ""}
+            `}></div>
         </section>
     )
 }

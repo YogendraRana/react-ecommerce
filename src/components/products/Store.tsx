@@ -16,7 +16,7 @@ const Store = () => {
     const [activeMenu, setActiveMenu] = useState<number>(1);
 
     return (
-        <div className="px-[10rem]">
+        <div>
             <h2 className="text-center text-[3.5rem] font-black">Start Exploring</h2>
 
             <div className="my-[1rem] py-[1.5rem] text-[1.5rem] flex gap-[1rem] justify-center">

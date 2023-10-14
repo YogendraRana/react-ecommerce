@@ -30,8 +30,6 @@ function Home() {
             </main>
             
             <Footer />
-
-            {/* drawers */}
         </section>
     )
 }

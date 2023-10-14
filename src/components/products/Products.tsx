@@ -20,7 +20,7 @@ const Products: React.FC<ProductsProp> = ({ category }) => {
         <>
             <Navbar />
 
-            <div className="min-h-[50vh] px-[10rem]">
+            <div className="min-h-[50vh]">
                 <h2 className="mt-[5rem] text-[3rem]">Collection for {category}</h2>
                 <p className="my-[3rem] text-[1.5rem] text-[#7b847d]">
                     We not only help you design exceptional products, <br />

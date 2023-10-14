@@ -21,7 +21,6 @@ const Navbar = (): JSX.Element => {
         <header 
             className={`
             h-[var(--nav-height)] 
-            px-[10rem] 
             flex justify-between items-center 
             sticky top-0 
             bg-white/80

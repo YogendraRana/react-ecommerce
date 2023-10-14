@@ -25,7 +25,7 @@ const Recommendation = () => {
 
     return (
         <>
-            <section ref={recommendRef} className="px-[10rem]">
+            <section ref={recommendRef}>
                 <ul className='flex gap-[2.5rem] items-center justify-center'>
                     {
                         menus.map((menu, index) =>

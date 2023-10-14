@@ -23,7 +23,7 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
     const swiperRef = useRef<SwiperType>();
 
     return (
-        <div className='px-[10rem] py-[2rem]'>
+        <div className='py-[2rem]'>
             <div className='mb-[1rem] flex justify-between items-center'>
                 <div className='text-[3rem] leading-0'>
                     {title}

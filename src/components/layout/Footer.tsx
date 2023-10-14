@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <footer className="px-[10rem] py-[5rem] border-t">
+        <footer className="py-[4rem] border-t">
             <div className="flex justify-between">
                 <div>
                     <h2 className='mb-[1rem] text-[1.8rem] font-semibold'>Main Menu</h2>
