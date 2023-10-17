@@ -45,7 +45,7 @@ const Drawer = ({ isDrawerOpen, setIsDrawerOpen, children }: IDrawerProps) => {
                 className={`
                     h-[100vh]
                     fixed top-0 left-0 right-0 bottom-0 
-                    bg-black/40 
+                    bg-black/50
                     duration-300
                     ${isDrawerOpen ? "opacity-100 visible z-[10]" : "opacity-0 invisible z-[-10]"}`}
             ></div>

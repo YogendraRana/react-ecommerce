@@ -18,7 +18,7 @@ const Navbar = (): JSX.Element => {
     }
 
     return (
-        <header 
+        <header
             className={`
             h-[var(--nav-height)] 
             flex justify-between items-center 
@@ -50,7 +50,7 @@ const Navbar = (): JSX.Element => {
 
             {/* drawers */}
             <Search isSearchOpen={isSearchOpen} setIsSearchOpen={() => setIsSearchOpen(!isSearchOpen)} />
-            <Cart isCartOpen={isCartOpen} setIsCartOpen={() => setIsCartOpen(!isCartOpen)}  />
+            <Cart isCartOpen={isCartOpen} setIsCartOpen={() => setIsCartOpen(!isCartOpen)} />
         </header>
     )
 }

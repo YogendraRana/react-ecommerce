@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperType } from 'swiper';
+import { Pagination } from 'swiper/modules';
 
 // swiper imports
 import 'swiper/css';
@@ -20,7 +21,7 @@ type SliderPropsType = {
 }
 
 const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
-    const swiperRef = useRef<SwiperType>();
+    const swiperRef = useRef<SwiperType | null>(null);
 
     return (
         <div className='py-[2rem]'>
@@ -39,9 +40,12 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
                     </button>
                 </div>
             </div>
+
             <Swiper
                 spaceBetween={10}
                 slidesPerView={4}
+                modules={[Pagination]}
+                pagination={{clickable: true}}
                 onSwiper={(swiper) => {swiperRef.current = swiper}}
                 breakpoints={{
                     576: {slidesPerView: 2, spaceBetween: 5},
@@ -61,4 +65,4 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
     )
 }
 
-export default Slider
+export default Slider;
