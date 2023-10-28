@@ -69,7 +69,7 @@ const Card = ({ item }: { item: ItemType }) => {
                                 onClick={() => {
                                     if (cart_items.find(i => i.id === item.id)) {
                                         removeFromCart(item.id)
-                                        toast.success("Removed from cart.");
+                                        toast.error("Removed from cart.");
                                     } else {
                                         addToCart(cartItem)
                                         toast.success("Added to cart.");

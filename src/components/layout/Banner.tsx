@@ -1,14 +1,17 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 
 // import data
 import data from "../../data/data";
+const banner_data = data.slice(0, 3);
+
+// import store
 import { useCartStore } from "../../store/cartStore";
 
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const banner_data = data.slice(0, 3);
 
     const cart_items = useCartStore(state => state.cart_items);
     const addToCart = useCartStore(state => state.addToCart);
@@ -66,8 +69,10 @@ const Banner = () => {
                         onClick={() => {
                             if (cart_items.find(i => i.id === data[activeIndex].id)) {
                                 removeFromCart(data[activeIndex].id)
+                                toast.error("Removed from cart.");
                             } else {
                                 addToCart(cartItem)
+                                toast.success("Added to cart.");
                             }
                         }}
                         className="h-[4.5rem] w-[4.5rem] py-[1rem] text-[1.5rem] border border-[#b2beb5] duration-300"

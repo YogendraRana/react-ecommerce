@@ -1,17 +1,19 @@
 import React from "react"
 import { toast } from "react-hot-toast"
+import { useNavigate, useParams } from "react-router-dom"
 
 // import components
-import Navbar from "../layout/Navbar"
+import Space from "../utils/Space"
 import Footer from "../layout/Footer"
+import Navbar from "../layout/Navbar"
+import ShareModal from "../modals/ShareModal"
+import ReviewModal from "../modals/ReviewModal"
 
 // import data
 import data from "../../data/data"
-import Space from "../utils/Space"
-import { useNavigate, useParams } from "react-router-dom"
+
+// import store
 import { useCartStore } from "../../store/cartStore"
-import ShareModal from "../modals/ShareModal"
-import ReviewModal from "../modals/ReviewModal"
 
 const ProductsDetail: React.FC = () => {
     const navigate = useNavigate();
@@ -69,16 +71,18 @@ const ProductsDetail: React.FC = () => {
 
             <div className="min-h-[50vh]">
                 <h2 className="mt-[2.5rem] text-[3rem]">Product detail of {product?.name}</h2>
-                <p className="my-[1rem] text-[1.5rem] text-[#7b847d]">
+                <div className="my-[1rem] text-[1.5rem] text-[#7b847d]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                    Neque incidunt aliquid, asperiores minus cupiditate repudiandae voluptas, dolorem blanditiis eos fugiat placeat tempore.
-                </p>
+                    Neque incidunt aliquid, cupiditate repudiandae voluptas, dolorem blanditiis eos fugiat placeat tempore.
+                </div>
+
+                <hr className="mt-[2rem] mb-[3rem]" />
 
                 <div className="mt-[2rem] flex gap-[1rem]">
                     <div className="w-1/2">
                         <img src={product?.image} alt="product-pic" className="h-[40rem] w-full object-cover" />
                     </div>
-                    <div className="w-1/2 p-[2rem] border">
+                    <div className="w-1/2 p-[2rem]">
                         <h2 className="text-[3.5rem]">{product?.name}</h2>
 
                         <div className="flex gap-[1rem] text-[1.5rem] text-[#7b847d]">
@@ -108,7 +112,7 @@ const ProductsDetail: React.FC = () => {
                                 onClick={() => {
                                     if (cart_items.find(i => i.id === product.id)) {
                                         removeFromCart(product.id);
-                                        toast.success("Removed from cart.");
+                                        toast.error("Removed from cart.");
                                     } else {
                                         addToCart(cartItem);
                                         toast.success("Added to cart.");

@@ -32,7 +32,7 @@ const Recommendation = () => {
                             <li key={index}>
                                 <button
                                     onClick={() => handleMenuClick(menu)}
-                                    className={`mb-[2rem] text-[3rem] duration-300 ${menu === recommendation ? "text-black" : "text-[#b2beb5] "}`}
+                                    className={`mb-[2rem] text-[3rem] font-bold duration-300 ${menu === recommendation ? "text-black" : "text-[#b2beb5] "}`}
                                 >
                                     {menu}
                                 </button>

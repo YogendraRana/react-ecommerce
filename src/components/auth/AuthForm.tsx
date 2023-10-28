@@ -1,10 +1,12 @@
 import { toast } from 'react-hot-toast'
 import { FormEvent, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 const AuthForm = () => {
     const [variant, setVariant] = useState('LOGIN');
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
 
     // form states
@@ -62,7 +64,7 @@ const AuthForm = () => {
             >
                 <div className='w-[40rem] mb-[2rem]'>
                     <h1 className='text-[3rem]'>Welcome to Shop</h1>
-                    <p className='text-[1.45rem] text-[#767676]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sed odio!</p>
+                    <p className='text-[1.45rem] text-[#767676]'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
 
                 <label htmlFor="email" className='w-[40rem] text-[1.45rem]'>
@@ -93,12 +95,18 @@ const AuthForm = () => {
                     type="submit"
                     onClick={handleSubmit}
                     disabled={isLoading}
-                    className='w-[40rem] py-[2rem] text-[1.25rem] bg-[#ededed]'
+                    className='w-[40rem] py-[1.5rem] text-[1.25rem] bg-[#ededed]'
                 >
                     Login
                 </button>
 
-                <button type='button' onClick={toggleVariant} className='mt-[1rem] text-[1.25rem] text-[#767676]'>New here? <u>Register</u></button>
+                <div className='w-[40rem] mt-[1rem] flex justify-between'>
+                    <button onClick={() => navigate('/')} type='button' className='text-[1.25rem] text-[#767676]'>
+                        <span className='mr-[1rem]'><i className='fa-solid fa-chevron-left'></i></span>
+                        Go Back</button>
+                    <button type='button' onClick={toggleVariant} className='text-[1.25rem] text-[#767676]'>New here? <u>Register</u></button>
+                </div>
+
             </form>
 
 
@@ -111,7 +119,7 @@ const AuthForm = () => {
             >
                 <div className='w-[40rem] mb-[2rem]'>
                     <h1 className='text-[3rem]'>Welcome to Shop</h1>
-                    <p className='text-[1.45rem] text-[#767676]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sed odio!</p>
+                    <p className='text-[1.45rem] text-[#767676]'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
 
                 <label htmlFor="name" className='w-[40rem] text-[1.45rem]'>
@@ -152,12 +160,17 @@ const AuthForm = () => {
                     type="submit"
                     onClick={handleSubmit}
                     disabled={isLoading}
-                    className='w-[40rem] py-[2rem] text-[1.25rem] bg-[#ededed]'
+                    className='w-[40rem] py-[1.5rem] text-[1.25rem] bg-[#ededed]'
                 >
                     Register
                 </button>
 
-                <button type='button' onClick={toggleVariant} className='mt-[1rem] text-[1.25rem] text-[#767676]'>Have an account? <u>Login</u></button>
+                <div className='w-[40rem] mt-[1rem] flex justify-between'>
+                    <button onClick={() => navigate('/')} type='button' className='text-[1.25rem] text-[#767676]'>
+                        <span className='mr-[1rem]'><i className='fa-solid fa-chevron-left'></i></span>
+                        Go Back</button>
+                    <button type='button' onClick={toggleVariant} className='text-[1.25rem] text-[#767676]'>Have an account? <u>Login</u></button>
+                </div>
             </form>
 
             <div className={`

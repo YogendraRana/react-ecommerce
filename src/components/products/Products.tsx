@@ -1,14 +1,14 @@
 import React from "react"
 
 // import components
+import Filter from "./Filter"
 import Card from "../utils/Card"
+import Space from "../utils/Space"
 import Navbar from "../layout/Navbar"
 import Footer from "../layout/Footer"
 
 // import data
 import data from "../../data/data"
-import Filter from "./Filter"
-import Space from "../utils/Space"
 
 // props type
 type ProductsProp = {
