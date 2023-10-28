@@ -23,8 +23,8 @@ const ProductsDetail: React.FC = () => {
     const product = data.find(item => item.id === parseInt(id as string));
 
     // cart
-    const cart_items = useCartStore(state => state.cart_items);
     const addToCart = useCartStore(state => state.addToCart);
+    const cart_items = useCartStore(state => state.cart_items);
     const removeFromCart = useCartStore(state => state.removeFromCart);
 
     const cartItem = {
@@ -70,8 +70,8 @@ const ProductsDetail: React.FC = () => {
             <div className="min-h-[50vh]">
                 <h2 className="mt-[2.5rem] text-[3rem]">Product detail of {product?.name}</h2>
                 <p className="my-[1rem] text-[1.5rem] text-[#7b847d]">
-                    We not only help you design exceptional products, <br />
-                    but also make it easy for you to share your designs with more like-minded people.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+                    Neque incidunt aliquid, asperiores minus cupiditate repudiandae voluptas, dolorem blanditiis eos fugiat placeat tempore.
                 </p>
 
                 <div className="mt-[2rem] flex gap-[1rem]">

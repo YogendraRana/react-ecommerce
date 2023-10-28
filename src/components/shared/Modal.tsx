@@ -23,8 +23,10 @@ const Modal = ({ isModalOpen, setIsModalOpen, children }: IModalProps) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         className="
-                            grid place-items-center
-                            fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+                            fixed top-1/2 left-1/2 
+                            transform 
+                            -translate-x-1/2 
+                            -translate-y-1/2
                             z-[200]
                         "
                     >
