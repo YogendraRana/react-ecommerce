@@ -78,26 +78,27 @@ const ProductsDetail: React.FC = () => {
 
                 <hr className="mt-[2rem] mb-[3rem]" />
 
-                <div className="mt-[2rem] flex gap-[1rem]">
-                    <div className="w-1/2">
+                <div className="mt-[2rem] flex gap-[1rem] sm:flex-col">
+                    <div className="w-1/2 sm:w-[100%]">
                         <img src={product?.image} alt="product-pic" className="h-[40rem] w-full object-cover" />
                     </div>
-                    <div className="w-1/2 p-[2rem]">
+                    
+                    <div className="w-1/2 p-[2rem] sm:w-[100%]">
                         <h2 className="text-[3.5rem]">{product?.name}</h2>
 
-                        <div className="flex gap-[1rem] text-[1.5rem] text-[#7b847d]">
-                            <div className="pr-[1rem] border-r text-[1.25rem]">
+                        <div className="flex gap-[1rem] text-[1.5rem] text-[#7b847d] md:flex-col">
+                            <div className="pr-[1rem] border-r text-[1.25rem] md:border-none">
                                 <span className="text-[1.5rem]">Rating: </span>
                                 {
                                     [1, 2, 3, 4, 5].map((val, index) => {
                                         return (
-                                            <i key={index} className={(product?.rating + 1 === val + 0.5) ? "fas fa-star-half-alt" : (product?.rating >= val) ? "fas fa-star" : "far fa-star"} aria-hidden='true' />
+                                            <i key={index} style={{marginRight: "0.25rem"}} className={(product?.rating + 1 === val + 0.5) ? "fas fa-star-half-alt" : (product?.rating >= val) ? "fas fa-star" : "far fa-star"} aria-hidden='true' />
                                         )
                                     })
                                 }
                             </div>
-                            <div className="pr-[1rem] border-r">Warranty: 1 year</div>
-                            <div className="pr-[1rem] border-r">Delivery: 2 days</div>
+                            <div className="pr-[1rem] border-r md:border-none">Warranty: 1 year</div>
+                            <div className="pr-[1rem] border-r md:border-none">Delivery: 2 days</div>
                             <div className="pr-[1rem]">Reviews: 25</div>
                         </div>
 

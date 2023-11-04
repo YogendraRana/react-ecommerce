@@ -27,6 +27,7 @@ const Search = ({ isSearchOpen, setIsSearchOpen }: SearchProps) => {
                     flex flex-col justify-center 
                     bg-white 
                     z-[50]
+                    md:px-[5rem] sm:px-[4rem]
             `}>
                 <div className="flex justify-between">
                     <h2 className="text-[1.5rem] text-black/60">What are you looking for?</h2>

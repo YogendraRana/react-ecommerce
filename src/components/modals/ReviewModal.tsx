@@ -39,7 +39,7 @@ const ReviewModal = ({ isModalOpen, setIsModalOpen }: IReviewModal) => {
                                 >
                                     {
                                         index < rating ? (
-                                            <i className="fa-solid fa-star text-yellow-400"></i>
+                                            <i className="fa-solid fa-star"></i>
                                         ) : (
                                             <i className="fa-regular fa-star"></i>
                                         )
