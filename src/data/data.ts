@@ -17,7 +17,7 @@ const data = [
         price: 100,
         rating: 3.5,
         brand: 'Adidas',
-        description: 'high quality product',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.',
         image: 'https://ciseco-reactjs.vercel.app/static/media/5.9ddc0dff360795c6f5b5.png',
     },
 
@@ -28,7 +28,7 @@ const data = [
         price: 120,
         rating: 4.5,
         brand: 'Nike',
-        description: 'high quality product',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.',
         image: 'https://ciseco-reactjs.vercel.app/static/media/8.cb062df1bb925627f03d.png',
     },
 

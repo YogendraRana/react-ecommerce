@@ -14,7 +14,7 @@ const Checkout = () => {
 
     return (
         <>
-            <div className='px-[10rem]'>
+            <div className='px-[10rem] md:px-[4rem] sm:px-[1rem]'>
                 <div className="h-[30vh] flex flex-col justify-center items-center relative">
                     <h2 className='text-[3rem]'>Checkout</h2>
                     <div className='mt-[1rem] text-[1.25rem]'>
@@ -28,7 +28,7 @@ const Checkout = () => {
 
                 <div className="p-[2rem] text-[1.25rem] bg-[#ededed]">
                     <i className="fa-regular fa-user"></i>
-                    <span className='ml-[1rem]'>Don't have an account? You need to have an account to make payment.</span>
+                    <span className='ml-[1rem]'>You need to have an account to make payment.</span>
                     <Link to='/join'>Click here to <u>register</u></Link>
                 </div>
 
@@ -37,7 +37,7 @@ const Checkout = () => {
                 <div>
                     <h2 className='text-[2rem] mb-[2rem]'>Shipping Details</h2>
 
-                    <form className='grid grid-cols-2 gap-[1rem] justify-between flex-wrap'>
+                    <form className='grid grid-cols-2 gap-[1rem] justify-between flex-wrap sm:grid-cols-1'>
                         <label>
                             <h2 className='text-[1.5rem] text-[#24252a]'>Your Name</h2>
                             <input type="text" placeholder="e.g. John Doe" autoComplete='off' className='w-[100%] p-[1rem] text-[1.25rem] border rounded-[0.5rem] placeholder:text-[1.25rem]' />
@@ -84,7 +84,7 @@ const Checkout = () => {
                 <div>
                     <h2 className='text-[2rem] mb-[2rem]'>Payment Detail</h2>
 
-                    <form className='grid grid-cols-2 gap-[1rem]'>
+                    <form className='grid grid-cols-2 gap-[1rem] sm:grid-cols-1'>
                         <label>
                             <h2 className='text-[1.5rem] text-[#24252a]'>Cardholder's Name</h2>
                             <input type="text" placeholder='Name' className='w-[100%] p-[1rem] text-[1.25rem] border rounded-[0.5rem] placeholder:text-[1.25rem]' />
@@ -112,7 +112,7 @@ const Checkout = () => {
                 <div className='p-[5rem] outline-dashed outline-2 outline-[#b2beb5] '>
                     <h2 className='text-[2rem] pb-[1rem] mb-[2rem] font-semibold'>Order Summary</h2>
 
-                    <div className='grid grid-cols-3 gap-[1rem]'>
+                    <div className='grid grid-cols-3 gap-[2rem] sm:grid-cols-1'>
                         <label>
                             <h2 className='text-[1.5rem] text-[#24252a]'>Order Total</h2>
                             <input value={`Rs ${grand_total}`} disabled className='w-[100%] p-[1rem] text-[1.25rem] border rounded-[0.5rem] placeholder:text-[1.25rem]' />

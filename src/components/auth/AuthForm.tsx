@@ -1,7 +1,6 @@
 import { toast } from 'react-hot-toast'
 import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const AuthForm = () => {
@@ -21,6 +20,7 @@ const AuthForm = () => {
     const toggleVariant = () => {
         if (variant === "LOGIN") { setVariant('REGISTER') }
         else setVariant('LOGIN')
+        enableAnimations(true)
     }
 
 
@@ -64,6 +64,7 @@ const AuthForm = () => {
             {/* form */}
             <form
                 ref={parent}
+
                 className={`
                     h-full w-[60%] px-[5rem] py-[4rem] flex flex-col justify-center items-center gap-[2rem]
                     md:w-[100%]
@@ -78,8 +79,7 @@ const AuthForm = () => {
                     variant === "REGISTER" && (
                         <label
                             htmlFor="name"
-                            className='w-[40rem] text-[1.45rem]'
-                            
+                            className='w-[40rem] text-[1.45rem]'                            
                         >
                             <p>Name</p>
                             <input
@@ -122,14 +122,17 @@ const AuthForm = () => {
                     disabled={isLoading}
                     className='w-[40rem] py-[1.5rem] text-[1.25rem] bg-[#ededed]'
                 >
-                    Register
+                    {variant === "LOGIN" ? "Login" : "Register"}
                 </button>
 
                 <div className='w-[40rem] mt-[1rem] flex justify-between'>
                     <button onClick={() => navigate('/')} type='button' className='text-[1.25rem] text-[#767676]'>
                         <span className='mr-[1rem]'><i className='fa-solid fa-chevron-left'></i></span>
                         Go Back</button>
-                    <button type='button' onClick={toggleVariant} className='text-[1.25rem] text-[#767676]'>Have an account? <u>Login</u></button>
+                    <button type='button' onClick={toggleVariant} className='text-[1.25rem] flex gap-[0.5rem] text-[#767676]'>
+                        <span>{variant === "LOGIN" ? "New here?" : "Have an account?"}</span>
+                        <u>{variant === "LOGIN" ? "Register" : "Login"}</u>
+                    </button>
                 </div>
             </form>
         </section>
