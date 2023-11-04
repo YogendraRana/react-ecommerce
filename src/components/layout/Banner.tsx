@@ -34,7 +34,13 @@ const Banner = () => {
     }
 
     return (
-        <div className="h-[calc(95vh-var(--nav-height))] px-[10rem] relative flex bg-[#f1f2f3]">
+        <div 
+            className="
+                h-[75vh] px-[3rem] relative flex bg-[#f1f2f3] 
+                sm:h-[90vh] sm:flex-col-reverse
+                md:px-[10rem]
+            "
+        >
             <motion.div
                 className='basis-[50%] flex flex-col justify-center gap-[1rem]'
                 key={activeIndex}
@@ -44,7 +50,7 @@ const Banner = () => {
                 transition={{ duration: 0.5 }}
             >
                 <motion.h2
-                    className="text-[4rem]"
+                    className="text-[4rem] sm:text-center"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
@@ -53,7 +59,7 @@ const Banner = () => {
                     {data[activeIndex].name}
                 </motion.h2>
                 <motion.p
-                    className="text-[1.5rem]"
+                    className="text-[1.5rem] sm:text-center"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
@@ -61,7 +67,7 @@ const Banner = () => {
                 >
                     {data[activeIndex].description}
                 </motion.p>
-                <div className="mt-[2rem] flex gap-[1rem]">
+                <div className="mt-[2rem] flex gap-[1rem] sm:justify-center">
                     <button className="h-[4.5rem] w-[12rem] py-[1rem] text-[1.5rem] border border-[#b2beb5] hover:bg-[#b2beb5] duration-300">
                         Buy now
                     </button>
