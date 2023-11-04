@@ -30,11 +30,11 @@ const Products: React.FC<ProductsProp> = ({ category }) => {
                 <Space />
 
                 <div className="mt-[4rem] flex gap-[1rem]">
-                    <div className="w-[25%]">
+                    <div className="w-[25%] md:w-[30%]">
                         <Filter />
                     </div>
 
-                    <div className="grid grid-cols-3 gap-[1rem] grow-[1]">
+                    <div className="grid grid-cols-3 gap-[1rem] grow-[1] md:grid-cols-2 sm:grid-cols-1">
                         {
                             data.map((item, index) => (
                                 <Card key={index} item={item} />
