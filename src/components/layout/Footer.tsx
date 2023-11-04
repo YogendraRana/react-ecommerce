@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer className="py-[4rem] border-t">
-            <div className="flex justify-between">
+            <div className="flex justify-between sm:flex-col sm:gap-[2rem]">
                 <div>
                     <h2 className='mb-[1rem] text-[1.8rem] font-semibold'>Main Menu</h2>
                     <ul className='flex flex-col gap-[0.5rem] text-[1.25rem]'>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="flex flex-col justify-between items-start">
+                <div className="flex flex-col justify-between">
                     <div className="mb-[2rem]">
                         <h2 className='mb-[0.5rem] text-[1.8rem] font-semibold'>Follow us on</h2>
                         <div className="flex gap-[1rem]">
@@ -72,7 +72,7 @@ const Footer = () => {
                                 type="email"
                                 placeholder="Email address..."
                                 required 
-                                className='w-[20rem] p-[1rem] border rounded-[0.5rem] text-[1.25rem] placeholder:text-[1.25rem]'
+                                className='p-[1rem] border rounded-[0.5rem] text-[1.25rem] placeholder:text-[1.25rem]'
                             />
                             <button type="submit" className="p-[1rem] rounded-[0.5rem] text-white text-[1.25rem] bg-red-500">Subscribe</button>
                         </form>
