@@ -32,7 +32,11 @@ const Recommendation = () => {
                             <li key={index}>
                                 <button
                                     onClick={() => handleMenuClick(menu)}
-                                    className={`mb-[2rem] text-[3rem] font-bold duration-300 ${menu === recommendation ? "text-black" : "text-[#b2beb5] "}`}
+                                    className={`
+                                        mb-[2rem] text-[3rem] font-bold duration-300
+                                        sm:text-[2rem]
+                                        ${menu === recommendation ? "text-black" : "text-[#b2beb5] "}
+                                    `}
                                 >
                                     {menu}
                                 </button>
@@ -42,7 +46,7 @@ const Recommendation = () => {
                 </ul>
 
 
-                <div className="grid grid-cols-4 gap-[1rem]">
+                <div className="grid grid-cols-4 gap-[1rem] md:grid-cols-3 sm:grid-cols-2">
                     {recommendation === menus[0] && data.slice(0, 8).map((item, index) => {
                         return (
                             <Card key={index} item={item} />
