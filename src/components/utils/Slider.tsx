@@ -26,16 +26,22 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
     return (
         <div className='py-[2rem]'>
             <div className='mb-[1rem] flex justify-between items-center'>
-                <div className='text-[3rem] leading-0'>
+                <div className='text-[3rem] leading-0 sm:text-[2rem]'>
                     {title}
-                    <span className='text-[#98a39b] text-[2.5rem]'> {message}</span>
+                    <span className='text-[#98a39b] text-[2.5rem] sm:text-[2rem]'> {message}</span>
                 </div>
 
                 <div className='flex gap-[0.5rem]'>
-                    <button onClick={() => swiperRef.current && swiperRef.current.slidePrev()} className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#e5e5e5] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'>
+                    <button 
+                        onClick={() => swiperRef.current && swiperRef.current.slidePrev()} 
+                        className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#e5e5e5] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'
+                    >
                         <i className='fa-solid fa-chevron-left'></i>
                     </button>
-                    <button onClick={() => swiperRef.current && swiperRef.current.slideNext()} className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#e5e5e5] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'>
+                    <button 
+                        onClick={() => swiperRef.current && swiperRef.current.slideNext()} 
+                        className='h-[3.25rem] w-[3.25rem] grid place-items-center bg-[#e5e5e5] rounded-[0.5rem] hover:bg-[#d4dad5] duration-200'
+                    >
                         <i className='fa-solid fa-chevron-right'></i>
                     </button>
                 </div>
@@ -48,7 +54,8 @@ const Slider :React.FC<SliderPropsType> = ({title, message, items}) => {
                 pagination={{clickable: true}}
                 onSwiper={(swiper) => {swiperRef.current = swiper}}
                 breakpoints={{
-                    576: {slidesPerView: 2, spaceBetween: 5},
+                    360: {slidesPerView: 1, spaceBetween: 5},
+                    480: {slidesPerView: 2, spaceBetween: 5},
                     768: {slidesPerView: 3, spaceBetween: 10},
                     1024: {slidesPerView: 4, spaceBetween: 20},
                 }}

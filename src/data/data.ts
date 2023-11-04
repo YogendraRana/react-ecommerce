@@ -6,7 +6,7 @@ const data = [
         price: 120,
         rating: 2.5,
         brand: 'Nike',
-        description: 'high quality product',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.',
         image: 'https://ciseco-reactjs.vercel.app/static/media/detail1.f45e3a4d9bfeafd2f70b.jpg',
     },
 
