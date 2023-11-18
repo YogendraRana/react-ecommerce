@@ -1,6 +1,8 @@
-import { useState } from "react";
-import { useStore } from "../../hooks/useStore";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+// import hooks/store
+import { useStore } from "../../hooks/useStore";
 
 // import components
 import Card from "../utils/Card";
@@ -14,6 +16,19 @@ import { ItemType, StoreMenuType } from "../../types/type";
 const Store = () => {
     const store_menu = useStore();
     const [activeMenu, setActiveMenu] = useState<number>(1);
+
+    const [products, setProducts] = useState<ItemType[]>([]);
+
+    useEffect(() => {
+        if (data) {
+            setProducts(data);
+        }
+    }, []);
+
+    useEffect(() => {
+        const filtered = activeMenu === 0 ? data : data.filter((item: ItemType) => item.categoryId === activeMenu);
+        setProducts(filtered);
+    }, [activeMenu]);
 
     return (
         <div>
@@ -51,7 +66,7 @@ const Store = () => {
 
             <div className="grid grid-cols-4 gap-4 md:grid-cols-3 sm:grid-cols-2">
                 {
-                    data.map((item: ItemType, index) => (
+                    products.map((item: ItemType, index) => (
                         <Card key={index} item={item} />
                     ))
                 }

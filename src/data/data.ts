@@ -2,7 +2,8 @@ const data = [
     {
         id: 1,
         name: 'Nike Slim Shirt',
-        category: 'women',
+        category: 'Men',
+        categoryId: 1,
         price: 120,
         rating: 2.5,
         brand: 'Nike',
@@ -13,7 +14,8 @@ const data = [
     {
         id: 2,
         name: 'Shirt',
-        category: 'women',
+        category: 'Women',
+        categoryId: 2,
         price: 100,
         rating: 3.5,
         brand: 'Adidas',
@@ -24,7 +26,8 @@ const data = [
     {
         id: 3,
         name: 'Nike Slim Shirt',
-        category: 'women',
+        category: 'Kids',
+        categoryId: 3,
         price: 120,
         rating: 4.5,
         brand: 'Nike',
@@ -35,7 +38,8 @@ const data = [
     {
         id: 4,
         name: 'Shirt',
-        category: 'women',
+        category: 'Kids',
+        categoryId: 3,
         price: 100,
         rating: 4.5,
         brand: 'Adidas',
@@ -46,7 +50,8 @@ const data = [
     {
         id: 5,
         name: 'Shirt',
-        category: 'women',
+        category: 'Men',
+        categoryId: 1,
         price: 100,
         rating: 1.5,
         brand: 'Adidas',
@@ -56,7 +61,8 @@ const data = [
     {
         id: 6,
         name: 'Nike Slim Shirt',
-        category: 'women',
+        category: 'Women',
+        categoryId: 2,
         price: 120,
         rating: 1,
         brand: 'Nike',
@@ -67,7 +73,8 @@ const data = [
     {
         id: 7,
         name: 'Shirt',
-        category: 'women',
+        category: 'Women',
+        categoryId: 2,
         price: 100,
         rating: 2,
         brand: 'Adidas',
@@ -78,7 +85,8 @@ const data = [
     {
         id: 8,
         name: 'Nike Slim Shirt',
-        category: 'women',
+        category: 'Men',
+        categoryId: 1,
         price: 120,
         rating: 3,
         brand: 'Nike',
@@ -89,7 +97,8 @@ const data = [
     {
         id: 9,
         name: 'Shirt',
-        category: 'women',
+        category: 'Women',
+        categoryId: 2,
         price: 100,
         rating: 4,
         brand: 'Adidas',
@@ -100,7 +109,8 @@ const data = [
     {
         id: 10,
         name: 'Shirt',
-        category: 'women',
+        category: 'Men',
+        categoryId: 1,
         price: 100,
         rating: 5,
         brand: 'Adidas',
@@ -111,7 +121,8 @@ const data = [
     {
         id: 11,
         name: 'Nike Slim Shirt',
-        category: 'women',
+        category: 'Kids',
+        categoryId: 3,
         price: 120,
         rating: 3,
         brand: 'Nike',
@@ -122,7 +133,32 @@ const data = [
     {
         id: 12,
         name: 'Shirt',
-        category: 'women',
+        category: 'Kids',
+        categoryId: 3,
+        price: 100,
+        rating: 4,
+        brand: 'Adidas',
+        description: 'high quality product',
+        image: 'https://ciseco-reactjs.vercel.app/static/media/2.0fda32f45e4cd5e368ea.png',
+    },
+
+    {
+        id: 12,
+        name: 'Shirt',
+        category: 'Men',
+        categoryId: 1,
+        price: 100,
+        rating: 4,
+        brand: 'Adidas',
+        description: 'high quality product',
+        image: 'https://ciseco-reactjs.vercel.app/static/media/2.0fda32f45e4cd5e368ea.png',
+    },
+
+    {
+        id: 12,
+        name: 'Shirt',
+        category: 'Men',
+        categoryId: 1,
         price: 100,
         rating: 4,
         brand: 'Adidas',

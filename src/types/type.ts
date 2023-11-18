@@ -2,6 +2,7 @@ export interface ItemType {
     id: number;
     name: string;
     category: string;
+    categoryId: number;
     price: number;
     brand: string;
     description: string;
@@ -11,6 +12,5 @@ export interface ItemType {
 export interface StoreMenuType {
     id: number;
     label: string;
-    href: string;
     icon: string;
 }
