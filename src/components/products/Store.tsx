@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 // import hooks/store
 import { useStore } from "../../hooks/useStore";

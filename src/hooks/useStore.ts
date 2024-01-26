@@ -17,7 +17,7 @@ export const useStore = () => {
         },
         {
             id: 3,
-            label: 'Kid',
+            label: 'Kids',
             icon: 'fa-solid fa-child-reaching'
         },
     ];
